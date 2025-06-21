@@ -14,6 +14,7 @@ const RegistrationPage = () => {
         const payload = { email, password }
         console.log(payload)
         const result = await registerUser(payload);
+        alert("Registration Successfully Done")
         console.log(result)
     }
 

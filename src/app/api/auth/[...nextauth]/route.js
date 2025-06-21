@@ -24,8 +24,9 @@ export const AuthOptions = {
                 // You can also use the `req` object to obtain additional parameters
                 // (i.e., the request IP address)
                 const { username, password } = credentials
-                console.log("This is the credentials",credentials)
-                const user = await dbConnect('test_user').findOne({ username })
+                console.log("This is the credentials", credentials)
+                const user = await dbConnect('test_user').findOne(username)
+                console.log("This is the user", user)
                 const isPasswordOk = password == user.password
                 // const res = await fetch("http://localhost:3000/", {
                 //     method: 'POST',
